@@ -3,13 +3,17 @@ pipeline {
   stages {
     stage('test') {
       steps {
-        echo 'echo "message"'
-        sh './test'
+        catchError(buildResult:'SUCCESS',stageResult:'FAILURE'){
+            echo 'echo "message"'
+            sh './test'
+        }
       }
     }
     stage('test2') {
       steps {
-        sh './test.ps'
+        catchError(buildResult:'SUCCESS',stageResult:'FAILURE'){
+            echo 'echo "message"'
+            sh './test'
       }
     }
   }
