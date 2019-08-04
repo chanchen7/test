@@ -14,7 +14,6 @@ pipeline {
       steps {
         catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
           echo 'echo "message"'
-          sh './test'
         }
 
       }
