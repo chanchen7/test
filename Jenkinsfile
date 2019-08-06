@@ -24,6 +24,7 @@ pipeline {
           echo 'echo "message"'
         }
 
+        sh './test.sh'
       }
     }
   }
