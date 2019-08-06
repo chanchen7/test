@@ -1,11 +1,11 @@
 pipeline {
   agent any
   stages {
-    stage('test') {
+    stage('001_中文中文') {
       steps {
         catchError(buildResult: 'FAILURE', stageResult: 'FAILURE', catchInterruptions: true, message: 'TEST') {
           echo 'echo "message"'
-          sh './test'
+          sh 'newman run 001_中文中文.json'
         }
 
       }
