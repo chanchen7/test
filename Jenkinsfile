@@ -10,7 +10,7 @@ pipeline {
 
       }
     }
-    stage('test3') {
+    stage('test34') {
       steps {
         catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
           echo 'echo "message"'
